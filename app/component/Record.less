@@ -1,0 +1,131 @@
+@gray: #999;
+@imgurl:"https://p1.ifengimg.com/wallet/images/";
+// .record {
+//     height: 100%;
+//     // padding-top: .2rem;
+//     font-size: .26rem;
+//     color: #333;  
+    
+//     .sending {
+//         padding: .2rem 0;
+//         text-align: center; 
+//     }
+//     .none {
+//         display: none;
+//     }
+// }
+
+// .record-list  {
+//     li { 
+        
+//         .record-item {
+//             display:-webkit-box;
+//             display: flex;
+
+//             -webkit-box-pack: justify;//for 兼容Android老版本
+//             justify-content: space-between;
+
+//             -webkit-box-align: center;//for 兼容Android老版本
+//             align-items: center;
+
+//             flex-wrap: nowrap;    
+            
+//             width: 100%;
+//             padding: .2rem .3rem;            
+
+//             .record-dec-wrap {
+//                 flex: 1;
+//                 .record-tt {
+//                     margin: 0;
+//                     font-weight: normal;
+//                     font-size: .34rem;
+//                 }
+            
+//             }
+
+//             .record-num-wrap {
+//                 text-align: right;
+//             //  .state {
+
+//             //  }
+//             }
+
+//             .subscript {
+//                 margin: .1rem 0 0;
+//                 color: @gray;
+//             }
+            
+//         }
+         
+//          &:after{
+//             content: "";      
+//             display: block;  
+//             height: 1px;            
+//             background-color: #e0e0e0;
+//             transform: scaleY(.5);
+//         }
+//     }    
+    
+// }
+
+//滚动加载更多提示
+.more-txt {
+    padding: .2rem 0;
+    text-align: center; 
+}
+.none {
+    display: none;
+}
+
+.no-record {
+    display:-webkit-box;
+    display: flex;
+
+    -webkit-box-pack: center;//for 兼容Android老版本
+    justify-content: center;
+
+    -webkit-box-align: center;//for 兼容Android老版本
+    align-items: center;
+
+    flex-wrap: nowrap;    
+    
+    width: 100%;
+    height: 100%;
+
+    .no-tt {
+        font-size: .3rem;
+        font-weight: normal;
+        color: @gray;
+        text-align: center;
+
+        .font-fc {
+            display: block;
+            padding-bottom: .05rem;
+            text-align: center;
+        }
+        &:before {
+            content: '';
+            display: block;
+            width: 2.27rem;
+            height: 1.64rem;
+            margin: -1.64rem auto .5rem;
+        }
+
+        &.no-income:before {
+            background: url("@{imgurl}v2/no-income.png") top center no-repeat;
+            background-size: contain;
+        }
+        &.no-withdraw:before {
+            background: url("@{imgurl}v2/no-cash.png") top center no-repeat;
+            background-size: contain;
+        }
+        &.no-recharge:before {
+            background: url("@{imgurl}v2/no-recharge.png") top center no-repeat;
+            background-size: contain;            
+        }
+        &.no-consume:before {
+            background: url("@{imgurl}v3/no-consume.png") top center no-repeat;
+            background-size: contain;
+        }
+    }
+}

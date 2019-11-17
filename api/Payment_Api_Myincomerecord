@@ -1,0 +1,46 @@
+{
+	"code": 200,
+	"msg": "OK",
+	"data": [
+		{
+		"fee": 4,
+		"ctime": 1512463297,
+		"desc": "金币兑换",
+		"current_total_income": 52754
+	}, {
+		"fee": 3,
+		"ctime": 1512380432,
+		"desc": "金币兑换",
+		"current_total_income": 52750
+	}, {
+		"fee": 100,
+		"ctime": 1512024634,
+		"desc": "新用户登录",
+		"current_total_income": 52747
+	}, {
+		"fee": 3,
+		"ctime": 1511921735,
+		"desc": "金币兑换",
+		"current_total_income": 52647
+	}, {
+		"fee": 13,
+		"ctime": 1511452865,
+		"desc": "金币兑换",
+		"current_total_income": 52644
+	}, {
+		"fee": 47,
+		"ctime": 1511366463,
+		"desc": "金币兑换",
+		"current_total_income": 52631
+	}, {
+		"fee": 58,
+		"ctime": 1511280063,
+		"desc": "金币兑换",
+		"current_total_income": 52584
+	}, {
+		"fee": 17,
+		"ctime": 1511107270,
+		"desc": "金币兑换",
+		"current_total_income": 52526
+	}]
+}

@@ -1,0 +1,51 @@
+.qa-ios-recharge {
+    box-sizing: border-box;
+    height: 100%;
+    padding-top: .3rem;
+    color: #333;
+    background-color: #ededed;
+}
+
+.step-list {      
+    background-color: #ededed;
+    .step-tt {         
+        padding: .3rem .9rem .3rem .9rem;
+        font-size: .32rem;
+        line-height: .48rem;
+           
+        &:before{
+            content:attr(data-index);
+            display:inline-block;  
+            width:.32rem;
+            height:.32rem;
+            margin: 0 .1rem 0 -0.42rem;
+            line-height: .33rem;
+            border-radius: .16rem;
+            text-align: center;            
+            font-size: .22rem;
+            vertical-align: 0.05rem;
+            color: #fff;
+            background-color: #c1c1c1;            
+        }
+    }
+
+    .step-context {       
+        padding: .24rem .9rem;
+        font-size: .26rem;
+        color: #404040;
+        
+        p{
+            padding-bottom: .2rem;
+        }
+        img {
+            display: block;
+            width: 100%;
+            // margin: .3rem 0;
+            &.iosapp-img {
+                width: 1.2rem;
+                // margin-left: 1rem;
+            } 
+        }   
+        
+    }
+}

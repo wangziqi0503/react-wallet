@@ -1,0 +1,104 @@
+@gray: #9b9b9b;
+@em-color: #FC5753;
+.topup {
+    height: 100%;
+    // padding-top: .2rem;
+    font-size: .28rem;
+    color: #333;  
+
+    .tel-wrap {
+        display: block;
+        position: relative;
+        .tel-tip {
+            position: absolute;
+            margin: -0.3rem 0 0 0.3rem;
+            font-size: .22rem;
+            color: #d8d8d8;
+        }
+    }
+    .input-tel {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        height: 1.2rem;
+        padding: .3rem;
+        border: none;
+        font-size: .48rem;
+    }
+    
+    .section-tt {
+        padding: 0 .3rem .3rem;
+        &:before {
+            content: "";
+            display: block;
+            height: 1px;
+            margin: 0 0 .3rem;
+            background-color: #F4F4F4;
+            transform: scaleY(.5);
+        }
+    }
+    
+    .topup-list {
+        // display: flex;
+        // align-items: center;
+        // flex-wrap: wrap;
+        padding: 0 .12rem .3rem .3rem;
+        li {
+            float: left;
+        }
+    }
+    .topup-item {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.18rem;
+        height: 1.1rem;
+        margin: .3rem .18rem 0 0;
+        border-radius: .08rem;
+        border: 1px solid #979797;
+        text-align: center;
+        color: @gray;
+        background-color: #fff;
+        overflow: hidden;
+        
+        &.is-use {
+            color: @em-color;
+            border-color: @em-color;
+        }
+        &.active {
+            color: #fff;
+            // background-color: @em-color;
+            background-image: linear-gradient(89deg, #F96858 14%, #EA3234 100%);
+        }
+    
+    }
+    
+    .topup-info {
+        padding: .05rem 0 0;
+        font-size: .22rem;
+    }
+    
+    .topup-taba {
+        // display: flex; //垂直居中微偏上
+        // align-items: center;
+        // justify-content: center;
+        box-sizing: border-box;
+        display: block;
+        width: 2.18rem;
+        height: .7rem;
+        margin: 0 0 0 .3rem;
+        border-radius: .08rem;
+        border: 1px solid @em-color;
+        line-height: .7rem; //with block
+        text-align: center; //with block
+        color: @em-color;
+        overflow: hidden;
+        &:hover {
+            color: #fff;
+            background-color: @em-color;
+        }
+    }
+    
+}
+

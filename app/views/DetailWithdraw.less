@@ -1,0 +1,207 @@
+@gray: #999;
+@suc: #f54343;
+.detail {
+    height: 100%;
+    // padding-top: .2rem;
+    font-size: .32rem;
+    color: #333;  
+}
+//detail withdraw
+.head {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: .96rem;
+    line-height: .96rem;
+    text-align: center;    
+    background-color: #fff;
+    overflow: hidden;
+    
+    .head-tt {
+        margin: 0;
+        font-weight: normal;
+        font-size: .36rem;
+        &:after{
+            content:"";
+            position: absolute;
+            left:0;
+            right:0;
+            bottom:0;
+            height:1px;
+            background-color: #e0e0e0;
+            transform: scaleY(.5);
+        }
+    }
+    .qa-help{
+        position:absolute;
+        right:.3rem;
+        bottom:.3rem;
+        width:.35rem;
+        height:.35rem;
+        background: url(http://p2.ifengimg.com/32d763abbcb53dee/2017/21/help.png) no-repeat;
+        background-size: 100% 100%;
+    }
+       
+}
+
+.detail-tt-wrap {
+    display:-webkit-box;
+    display: flex;
+
+    -webkit-box-pack: center;//for 兼容Android老版本
+    justify-content: center;
+
+    -webkit-box-align: center;//for 兼容Android老版本
+    align-items: center;
+
+    flex-wrap: nowrap; 
+    box-sizing: border-box;
+    width: 100%;
+    padding: .5rem .3rem;  
+    text-align: center;    
+
+    .detail-tt {
+        font-size: .48rem;
+    }
+
+    .detail-tt-des {
+        padding-top: .1rem;
+        // font-size: .4rem;
+        color: @gray;
+    }
+}
+
+.detail-info, .detail-tip {
+    display:-webkit-box;
+    display: flex;
+
+    -webkit-box-pack: justify;//for 兼容Android老版本
+    justify-content: space-between;
+
+    // 商务订单号 可能为空 垂直方向不能居中
+    // -webkit-box-align: center;//for 兼容Android老版本
+    // align-items: center;
+
+    flex-wrap: nowrap; 
+    box-sizing: border-box;
+    width: 100%;
+    padding: .2rem .3rem; 
+
+    .detail-item-cont {
+        text-align: right;
+    }
+
+    p+p {
+        padding-top: .1rem;
+    }
+   
+}
+
+.detail-tip {
+    font-size: .26rem;
+    color: @gray;
+}
+
+.main-wrap {
+    &:before,  &:after {
+        content: '';
+        display: block;
+        height: 1px;
+        background-color: #e0e0e0;
+        transform: scaleY(0.5);
+    }
+}
+.detail-flow {
+    display:-webkit-box;
+    display: flex;
+    
+    padding: .34rem .3rem;    
+    
+    .flow-name {
+        padding-right: .35rem;
+    }
+    .flow-main {
+        flex: 1;
+        font-size: .28rem;
+
+        li {
+            height: 1.2rem;// for vertical line
+            &:not(:first-of-type) {
+                z-index: 0;
+                position: relative;
+                // padding-top: .5rem;
+            }
+
+            &:not(:first-of-type):before {
+                content: "";
+                position: absolute;
+                top: -0.90rem;
+                left: .145rem;
+                bottom: 1.05rem;
+                width: 1px;
+                background-color: #e0e0e0;
+                transform: scaleX(.5);
+            }       
+        }
+        .flow-item {
+            display:-webkit-box;
+            display: flex;
+        
+            -webkit-box-pack: justify;//for 兼容Android老版本
+            justify-content: space-between;
+        
+            -webkit-box-align: center;//for 兼容Android老版本
+            align-items: center;
+        
+            flex-wrap: nowrap; 
+        
+            width: 100%;           
+
+            .flow-step {
+                position:relative;
+                z-index: 1;
+                &:before {
+                    content: "";                  
+                    display: inline-block;
+                    width: .29rem;
+                    height: .29rem;
+                    margin-right: .1rem;
+                    // vertical-align: middle;
+                    vertical-align: -0.06rem;
+                    background: url(https://user.iclient.ifeng.com/images/count_image/detail_fail.png) 0 0 no-repeat;
+                    background-size: contain;
+                }
+                &:nth-type-child(2) {
+                    z-index: 2;
+                }
+                &:last-of-type {
+                    z-index: 3;
+                }
+            }                
+        }
+        
+        .time, .tip {
+            color: @gray;
+        }
+        .tip {
+            margin:.1rem 0 0 .39rem;
+            font-size: .26rem;
+        }
+        
+        // checked status
+        .suc {
+            &:not(:first-of-type):before {
+                background-color: @suc;
+            }
+            .flow-step {
+                &:before {
+                    background: url(https://user.iclient.ifeng.com/images/count_image/detail_suc.png) 0 0 no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+
+    }  
+}

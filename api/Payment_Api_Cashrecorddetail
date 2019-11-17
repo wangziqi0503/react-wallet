@@ -1,0 +1,19 @@
+{
+	"code": 200,
+	"msg": "OK",
+	"data": {
+		"inner_trade_no": "2018020116471483256248422",
+		"fee": 500,
+		"withdraw_channel": "WITHDRAW_ZFB",
+		"account_info": {
+			"account": "18801351626",
+			"actual_name": "张君"
+		},
+		"withdraw_status": 3,
+		"update_time": 1517474973,
+		"create_time": 1517474834,
+		"journal_id": "2018020183256248164714",
+		"pay_date": "2018-02-01 16:49:33",
+		"outer_order_id": "20180201110070001502020059267559"
+	}
+}

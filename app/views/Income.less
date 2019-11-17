@@ -1,0 +1,300 @@
+@import "./COMMON.less";
+@import "./Mixins.less";
+@border-color: #ededed;
+@font-color-red: #f54343;
+@font-color-gray: #999;
+
+.income {
+    padding: 0 0 .1rem;
+    font-size: .28rem;
+    background: #f6f6fa;
+}
+//add 2017.12.8
+.notice-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: .66rem;
+    padding: 0 .3rem;
+    color: #fff;
+    background: #FF5953;
+    .notice-tt {
+        font-size: .28rem;
+        font-weight: normal;
+        &:before {
+           content: "";
+           display: inline-block;
+           width: .34rem;
+           height: .34rem;
+           margin: 0 .1rem 0 0;
+           vertical-align: -0.05rem;
+           background: url('@{IMGURL}v3/i_notice.png') 0 0 no-repeat;
+           background-size: contain; 
+        }
+    }
+    .notice-link {
+        display: block;
+        font-size: .22rem;
+        &:after {
+            content: "";
+            display: inline-block;
+            width: .12rem;
+            height: .22rem;
+            margin: 0 0 0 .1rem;
+            vertical-align: -0.025rem;
+            background: url('@{IMGURL}v3/arrow_right_white.png') 0 0 no-repeat;
+            background-size: contain; 
+         }
+    }
+}
+/**
+** 2017.11.9 改版
+**/
+.income-wrap {
+    // margin: 0 0 .16rem; //space
+    padding: .5rem .3rem 0;
+    color: #fff;
+    background-image: linear-gradient(89deg, #F96858 14%, #EA3234 100%);
+    // background-color: @font-color-red;
+    .income-tt {
+        height: .4rem;
+    }
+}
+.income-num {
+    display: flex;
+    align-items: center;
+    height: 1.9rem;
+    font-size: 1.2rem;
+}
+//navitem space line
+.nav-box + .nav-box {
+    &:before {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: #f4f4f4;
+        transform: scaleY(.5);
+    }
+}
+.navitem-wrap {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 1.52rem;
+    padding: 0 .3rem;
+    color: #4a4a4a;
+    background-color: #fff;
+  
+    .navitem-tiptxt {
+        padding: 0 .1rem 0 0;
+        color: @font-color-red;
+    }
+
+    &:after {
+        //arrow
+        content: "";
+        display: block;
+        width: .18rem;
+        height: .32rem;
+        // height: .34rem;
+        background: url('@{IMGURL}v2/arrow_right.png') 0 0 no-repeat;
+        background-size: contain;
+    }    
+}
+
+.navitem {
+    flex: 1;
+    display: block; //must [besides if not, size of :before img will not look the same ]
+    &:before {
+        content: "";
+        display: inline-block;
+        width: .48rem;
+        height: .48rem;
+        margin: 0 .2rem 0 0;
+        vertical-align: -0.14rem;
+        background: url('@{IMGURL}v3/i_cash.png') 0 0 no-repeat;
+        background-size: contain;        
+    }
+    &.navitem-recharge {
+        &:before {
+            background: url('@{IMGURL}v3/i_recharge.png') 0 0 no-repeat;
+            background-size: contain;        
+        }
+    }
+    &.navitem-his {
+        &:before {
+            background: url('@{IMGURL}v3/i_his.png') 0 0 no-repeat;
+            background-size: contain;        
+        }
+    }
+}
+
+.adbox-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .3rem;
+    background-color: #fff;
+    &:first-of-type {
+        margin: .1rem 0 0;
+    }
+    & + & {
+        border-top: .5px solid #f4f4f4;
+    }
+    .adtt {
+        font-size: .3rem;
+        color: #333;
+    }
+    .adinfo {
+        padding: .1rem 0 0;
+        font-size: .22rem;
+        color: #999;
+    }
+    .addbtn {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 1.2rem;
+        height: .32rem;
+        margin: .1rem 0 0;
+        line-height: .32rem;
+        border-radius: .16rem;
+        border: 1px solid #FC5753;
+        text-align: center;
+        font-size: .2rem;
+        color: #FC5753;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        // width: 1.6rem;
+        // height: 1.6rem;
+        width: 1.22rem;
+        height: 1.22rem;
+        background: url('@{IMGURL}v3/adimg_iplan.png') 0 center no-repeat;
+        background-size: contain;
+    }
+    &.adbox-income {
+        &:after {
+            width: 1.6rem;
+            height: 1.6rem;
+            background: url('@{IMGURL}v3/adimg_income.png') 0 center no-repeat;
+            background-size: contain;
+        }
+    }
+    &.adbox-redbag {
+        &:after {
+            width: 1.43rem;
+            height: 1.23rem;
+            background: url('@{IMGURL}v3/adimg_redbag.png') 0 center no-repeat;
+            background-size: contain;
+        }
+    }
+
+}
+
+// .income-list {
+//     background: #fff;
+//     font-size: .5rem;
+//     margin-bottom: .2rem;
+//     border-bottom: 1px solid #ededed;
+//     display: flex;
+    
+//     li {
+//         justify-content: center;
+//         border-right: 1px solid #ededed;
+//         text-align: center;
+//         font-size: .32rem;        
+//         width: 50%;
+//         line-height: 1;
+//         padding: .34rem 0 0.3rem 0;
+
+//         a {
+//             color: @font-color-gray;
+//             display: block;
+//         }
+
+//         span {
+//             font-size: .4rem;
+//             color: @font-color-red;
+//             display: block;
+//             margin-bottom: .2rem;
+//         }
+
+//         &:nth-of-type(2n) {
+//             border-right: 0;
+//         }
+//     }
+// }
+
+// .income-balance {
+//     font-size: .4rem;
+//     height: 5.2rem;
+//     background-image: linear-gradient(-45deg, #fe5c5d, #fd4344);
+//     color: #fff;
+//     text-align: center;
+//     position: relative;
+// }
+
+// .income-text {
+//     position: absolute;
+//     top: 1.74rem;
+//     z-index: 10;
+//     width: 100%;
+//     span {
+//         font-size: .5rem;
+//     }
+//     p {
+//         margin-bottom: .3rem;
+//     }
+// }
+
+// .btn {
+//     display: inline-block;
+//     font-size: .32rem;
+//     height: .64rem;
+//     width: 1.6rem;
+//     line-height: .64rem;
+//     text-align: center;
+//     color: #fff;
+//     border: .03rem solid #fff;
+//     border-radius: .1rem;
+
+//     &.disabled {
+//         opacity:0.29;
+// //      color: #999;
+// //      border: .03rem solid #999;
+//     }
+// }
+
+// .income-round {
+//     margin-top: 0.53rem;
+// }
+
+// .income-banner {
+//     a {
+//         display: block;
+//         margin-bottom: .2rem;
+//     }
+
+//     img {
+//         width: 100%;
+//     }
+// }
+
+
+// #chart {
+//   background: #fff;
+// }
+
+
+// .chart {
+//   background: #fff;
+//   padding: 0.2rem;
+//   p {
+//       font-size: .3rem;
+//       color: #999;
+//       margin-bottom: .2rem;
+//   }
+// }

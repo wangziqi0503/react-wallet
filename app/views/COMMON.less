@@ -1,0 +1,126 @@
+@import "~normalize.css/normalize.css";
+@import "./Mixins.less";
+
+// apple.com: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana,
+@font-family-sans-serif: "Segoe UI",
+"Lucida Grande",
+Helvetica,
+Arial,
+"Microsoft YaHei",
+FreeSans,
+Arimo,
+"Droid Sans",
+"wenquanyi micro hei",
+"Hiragino Sans GB",
+"Hiragino Sans GB W3",
+"FontAwesome",
+sans-serif;
+@font-family-serif: Georgia,
+"Times New Roman",
+Times,
+SimSun,
+"FontAwesome",
+serif; //FangSong, STFangSong
+@font-family-monospace: Monaco,
+Menlo,
+Consolas,
+"Courier New",
+"FontAwesome",
+monospace;
+@font-family-kai: Georgia,
+"Times New Roman",
+Times,
+Kai,
+"Kaiti SC",
+KaiTi,
+BiauKai,
+"FontAwesome",
+serif;
+// 补充 normalize
+
+/**
+ * Fix the flawed CSS box model - Yes, IE6"s box model is better
+ * Browser support: IE8+
+ * via: http://paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+
+// *,
+// *:before,
+// *:after {
+//     box-sizing: border-box;
+// }
+
+html,
+body {
+    height: 100%;
+    // max-height: 100%;
+    min-height: 100%; //overflow: hidden;
+    background: #fff;
+}
+
+body {
+    user-select: none;
+    font-family: @font-family-sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body,
+ul,
+ol,
+dl,
+dt,
+dd,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+a:focus,
+a:active,
+a:hover {
+    outline: 0;
+}
+
+ins,
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4, 
+p {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+
+input {
+    -webkit-appearance: none;
+    outline: none;
+}
+
+em {
+    font-style: normal;
+}
+.clearfix:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    zoom: 1;
+}

@@ -1,0 +1,30 @@
+// Mixins
+// Micro clear fix
+// via: http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+
+// Text overflow
+// Requires inline-block or block for proper styling
+// -----------------------------------------------------------------------------
+
+.text-overflow(@display: block) {
+  display: @display;
+  word-wrap: normal; /* for IE */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+@IMGURL: 'https://p1.ifengimg.com/wallet/images/';

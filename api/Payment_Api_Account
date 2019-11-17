@@ -1,0 +1,16 @@
+{
+	"code": 200,
+	"msg": "OK",
+	"data": {
+		"balance": "10",
+		"withdraw": 52300,
+		"fee": 204000,
+		"limit": 1500,
+		"withdrawTimes": 1,
+		"max":10000,
+		"teleSign":1,
+		 "income": 360048, 
+        "pageToken": "5b682ee4318f7fb0d03ca31abdd67357"
+	}
+	
+}
